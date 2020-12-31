@@ -5,10 +5,14 @@ Created on Sat Nov  7 19:06:56 2020
 
 @author: taufiq
 """
-
-gaji = int(input("masukan gaji: "))
-berkeluarga = (False, True)[input("sudah berkeluarga? (Y/T)") =="Y"]
-punya_rumah = (False, True)[input("punya rumah (Y/T)") == "Y"]
+while True:
+    try:
+        gaji = int(input("masukan gaji: "))
+        berkeluarga = (False, True)[input("sudah berkeluarga? (Y/T)") =="Yy"]
+        punya_rumah = (False, True)[input("punya rumah (Y/T)") == "Yy"]
+        break
+    except ValueError:
+        print("yang anda masukan bukan angka, harap masukan angka!")
 
 if gaji > 300000000:
     print("gaji sudah diatas UMR")

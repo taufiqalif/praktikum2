@@ -1,10 +1,14 @@
-nama = input("masukan nama: ")
-uts = input("masukan nila UTS: ")
-uas = input("masukan nilai UAS: ")
-tugas = input("masukan nilai TUGAS: ")
-akhir = (int(tugas)*.2)+(int(uts)*.4)+(int(uas)*.4)
-keterangan = ("TIDAK LULUS", "LULUS")[akhir > 60.0]
-
+while True:
+    try:
+        nama = input("masukan nama: ")
+        uts = input("masukan nilai UTS: ")
+        uas = input("masukan nilai UAS: ")
+        tugas = input("masukan nilai TUGAS: ")
+        akhir = (float(tugas)*.2)+(float(uts)*.4)+(float(uas)*.4)
+        keterangan = ("TIDAK LULUS", "LULUS")[akhir > 60.0]
+        break
+    except ValueError:
+        print("harap masukan angka saat memasukan nilai!")
 if akhir > 80:
     huruf = "A"
 elif akhir > 70:
